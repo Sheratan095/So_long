@@ -95,7 +95,7 @@ typedef struct s_assets
 	void	*exit_open;
 	void	*enemy;
 	void	*death[2];
-	void	*win;
+	void	*win[2];
 }	t_assets;
 
 typedef struct s_vars

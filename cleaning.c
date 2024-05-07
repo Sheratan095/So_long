@@ -71,7 +71,8 @@ static void	free_assets(t_vars *vars)
 	mlx_destroy_image(vars->mlx, vars->assets->player_left[1]);
 	mlx_destroy_image(vars->mlx, vars->assets->death[0]);
 	mlx_destroy_image(vars->mlx, vars->assets->death[1]);
-	mlx_destroy_image(vars->mlx, vars->assets->win);
+	mlx_destroy_image(vars->mlx, vars->assets->win[0]);
+	mlx_destroy_image(vars->mlx, vars->assets->win[1]);
 	free(vars->assets);
 }
 

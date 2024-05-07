@@ -36,12 +36,12 @@ int	finish_game(t_vars *vars, t_game_status status)
 	mlx_destroy_window(vars->mlx, vars->win);
 	if (status == lose)
 	{
-		vars->win = mlx_new_window(vars->mlx, 640, 480, "YOU DIED");
+		vars->win = mlx_new_window(vars->mlx, 800, 400, "YOU DIED");
 		ft_printf("\nLOSE\n\n");
 	}
 	else if (status == win)
 	{
-		vars->win = mlx_new_window(vars->mlx, 640, 480, "YOU WIN");
+		vars->win = mlx_new_window(vars->mlx, 800, 400, "YOU WIN");
 		ft_printf("\nWIN\n\n");
 	}
 	mlx_key_hook(vars->win, finish_hook, vars);
@@ -86,11 +86,11 @@ static int	death_animation(t_vars *vars)
 {
 	static int	frame_count;
 
-	if (frame_count > 1000)
+	if (frame_count > 2000)
 		put_img(vars, vars->assets->death[0], 0, 0);
 	else
 		put_img(vars, vars->assets->death[1], 0, 0);
-	if (frame_count == 2000)
+	if (frame_count == 4000)
 		frame_count = 0;
 	frame_count++;
 	return (0);
@@ -99,6 +99,15 @@ static int	death_animation(t_vars *vars)
 //Just display on screen the win aniamtion
 static int	win_animation(t_vars *vars)
 {
-	put_img(vars, vars->assets->win, 0, 0);
+		static int	frame_count;
+
+	if (frame_count > 2000)
+		put_img(vars, vars->assets->win[0], 0, 0);
+	else
+		put_img(vars, vars->assets->win[1], 0, 0);
+	if (frame_count == 4000)
+		frame_count = 0;
+	frame_count++;
+	return (0);
 	return (0);
 }

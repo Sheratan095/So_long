@@ -67,9 +67,10 @@ static void	load_assets(t_vars *vars)
 	vars->assets->wall = get_img(vars, "textures/wall.xpm");
 	vars->assets->floor = get_img(vars, "textures/floor.xpm");
 	vars->assets->collectible = get_img(vars, "textures/collectible.xpm");
-	vars->assets->death[0] = get_img(vars, "textures/you_are_dead.xpm");
-	vars->assets->death[1] = get_img(vars, "textures/you_are_dead_1.xpm");
-	vars->assets->win = get_img(vars, "textures/win.xpm");
+	vars->assets->death[0] = get_img(vars, "textures/death1.xpm");
+	vars->assets->death[1] = get_img(vars, "textures/death2.xpm");
+	vars->assets->win[0] = get_img(vars, "textures/win1.xpm");
+	vars->assets->win[1] = get_img(vars, "textures/win2.xpm");
 }
 
 //Function that actually does the convertion
