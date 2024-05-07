@@ -99,7 +99,7 @@ static int	death_animation(t_vars *vars)
 //Just display on screen the win aniamtion
 static int	win_animation(t_vars *vars)
 {
-		static int	frame_count;
+	static int	frame_count;
 
 	if (frame_count > 2000)
 		put_img(vars, vars->assets->win[0], 0, 0);
