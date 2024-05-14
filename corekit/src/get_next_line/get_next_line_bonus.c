@@ -108,7 +108,7 @@ char	*format_result(char *reminder)
 	return (result);
 }
 
-// Arrova allo \n (fine della stringa di output) o alla fine della string
+// Arriva allo \n (fine della stringa di output) o alla fine della string
 // Se non c'è più niente vuol dire che il reminder deve essere vuoto
 // 'new_reminder' allocato per la lunghezza totale - lunghezza
 // 		della stringa risultante +1(\0)
