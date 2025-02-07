@@ -70,7 +70,7 @@ static t_bool	validate_file_name(char *file_name, t_game *game)
 		return (true);
 	}
 	ft_free_matrix((void **)file_name_splitted);
-	return (game->reason = "Error, wring file extension", false);
+	return (game->reason = "Error, wrong file extension", false);
 }
 
 //Allocate the map by sizes previously taken
